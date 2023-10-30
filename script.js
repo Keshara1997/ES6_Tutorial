@@ -93,21 +93,31 @@
 //       console.log(ninja.chop(5));
 //    } 
 
-window.onload = function() {  
-   var ninja = {
+// window.onload = function() {  
+//    var ninja = {
       
-      cho(x) {
-         var _this = this;
-         window.setInterval(function() {
-            if (x > 0) {
-               console.log("you chopped the enemy " + x + " times");
-               x--;
-            }
-         }, 1000);
-      }
-   };
-   ninja.cho(50);
+//       cho(x) {
+//          var _this = this;
+//          window.setInterval(function() {
+//             if (x > 0) {
+//                console.log("you chopped the enemy " + x + " times");
+//                x--;
+//             }
+//          }, 1000);
+//       }
+//    };
+//    ninja.cho(50);
   
+// }
+
+
+window.onload = function() {
+   var seka = ["sekou", "mohamed", "kaba"];
+
+   var refined = seka.filter(function(name) {
+      return name.length > 4;
+   });   
+   console.log(refined);
 }
 
 
