@@ -82,13 +82,34 @@
 //    }
  
 
-window.onload = function() {
+// window.onload = function() {
   
-   var ninja = {
+//    var ninja = {
         
-         chop: function(x) {
-            console.log("you chopped the enemy " + x + " times");
-         }
+//          chop: function(x) {
+//             console.log("you chopped the enemy " + x + " times");
+//          }
+//       }
+//       console.log(ninja.chop(5));
+//    } 
+
+window.onload = function() {  
+   var ninja = {
+      
+      cho(x) {
+         var _this = this;
+         window.setInterval(function() {
+            if (x > 0) {
+               console.log("you chopped the enemy " + x + " times");
+               x--;
+            }
+         }, 1000);
       }
-      console.log(ninja.chop(5));
-   } 
+   };
+   ninja.cho(50);
+  
+}
+
+
+
+
