@@ -111,15 +111,43 @@
 // }
 
 
+// window.onload = function() {
+//    var seka = ["sekou", "mohamed", "kaba"];
+
+//    var refined = seka.filter(function(name) {
+//       return name.length > 4;
+//    });   
+//    console.log(refined);
+// }
+
+
+
 window.onload = function() {
-   var seka = ["sekou", "mohamed", "kaba"];
+   genWrapper = (function* generator(){
+      var tweets = yield $.getJSON("tweets.json");
+      console.log(tweets);
+      var friends = yield $.getJSON("friends.json");
+      console.log(friends);
+      var videos = yield $.getJSON("/data/videos.json");
+      console.log(videos);
 
-   var refined = seka.filter(function(name) {
-      return name.length > 4;
-   });   
-   console.log(refined);
-}
+   });
+ 
 
 
 
 
+   function genWrapper(generator) {
+      var gen = generator();
+
+      function handle(yielded) {
+         if (!yielded.done) {
+            yielded.value.then(function(data) {
+               return handle(gen.next(data));
+            })
+         }
+      }
+      return handle(gen.next());
+   }
+
+} 
