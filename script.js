@@ -14,13 +14,27 @@
 // }
 
 
-window.onload = function() {
+// window.onload = function() {
 
-    var items = document.getElementsByTagName("li");
+//     var items = document.getElementsByTagName("li");
     
-    for (var i = 0; i < items.length; i++) {
-        items[i].onclick = function(e) {
-            console.log(e.target.innerHTML);
-        }
-    } 
+//     for (var i = 0; i < items.length; i++) {
+//         items[i].onclick = function(e) {
+//             console.log(e.target.innerHTML);
+//         }
+//     } 
+// }
+
+window.onload = function() {
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    Person.prototype.greet = function() {
+        console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+    }
+    var person = new Person("John", 21);
+    person.greet();
+    var person2 = new Person("Mary", 19);
+    person2.greet();
 }
