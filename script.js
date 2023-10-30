@@ -39,24 +39,34 @@
 //     person2.greet();
 // }
 
-window.onload = function() {
-    var num1= [1,2,3,4,5,6,7,8,9,10];
-    var num2 = [...num1, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+// window.onload = function() {
+//     var num1= [1,2,3,4,5,6,7,8,9,10];
+//     var num2 = [...num1, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
-    console.log(num2);
-}
+//     console.log(num2);
+// }
+
+//  window.onload = function() {
+//     var num1= [1,2,3,4];
+
+//     function sumUp(toAdd) {
+//         let result = 0;
+//         for (let i = 0; i < toAdd.length; i++) {
+//             result += toAdd[i];
+//         }
+//         return result;
+//     }
+
+//     console.log(sumUp(num1));
+// }
+
 
  window.onload = function() {
-    var num1= [1,2,3,4];
+    function seka (name, age) {
+       console.log("Hello, my name is " + name + " and I am " + age + " years old.");
 
-    function sumUp(toAdd) {
-        let result = 0;
-        for (let i = 0; i < toAdd.length; i++) {
-            result += toAdd[i];
-        }
-        return result;
     }
-
-    console.log(sumUp(num1));
+    seka("John", 21);
+   
+   
 }
-
