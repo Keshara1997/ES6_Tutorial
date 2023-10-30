@@ -25,16 +25,38 @@
 //     } 
 // }
 
+// window.onload = function() {
+//     function Person(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+//     Person.prototype.greet = function() {
+//         console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+//     }
+//     var person = new Person("John", 21);
+//     person.greet();
+//     var person2 = new Person("Mary", 19);
+//     person2.greet();
+// }
+
 window.onload = function() {
-    function Person(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-    Person.prototype.greet = function() {
-        console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
-    }
-    var person = new Person("John", 21);
-    person.greet();
-    var person2 = new Person("Mary", 19);
-    person2.greet();
+    var num1= [1,2,3,4,5,6,7,8,9,10];
+    var num2 = [...num1, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+    console.log(num2);
 }
+
+ window.onload = function() {
+    var num1= [1,2,3,4];
+
+    function sumUp(toAdd) {
+        let result = 0;
+        for (let i = 0; i < toAdd.length; i++) {
+            result += toAdd[i];
+        }
+        return result;
+    }
+
+    console.log(sumUp(num1));
+}
+
