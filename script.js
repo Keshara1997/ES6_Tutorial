@@ -61,12 +61,22 @@
 // }
 
 
- window.onload = function() {
-    function seka (name, age) {
-       console.log("Hello, my name is " + name + " and I am " + age + " years old.");
+//  window.onload = function() {
+//     function seka (name, age) {
+//        console.log("Hello, my name is " + name + " and I am " + age + " years old.");
 
-    }
-    seka("John", 21);
+//     }
+//     seka("John", 21);
    
    
-}
+// }
+
+
+window.onload = function() {
+   var str = "good morning";
+
+   if (str.startsWith("good")) {
+     var str2 = str.replace("good", "bad");
+   }
+   console.log(str2);
+   }
