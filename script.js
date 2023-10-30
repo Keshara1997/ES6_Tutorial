@@ -122,32 +122,32 @@
 
 
 
-window.onload = function() {
-   genWrapper = (function* generator(){
-      var tweets = yield $.getJSON("tweets.json");
-      console.log(tweets);
-      var friends = yield $.getJSON("friends.json");
-      console.log(friends);
-      var videos = yield $.getJSON("/data/videos.json");
-      console.log(videos);
+// window.onload = function() {
+//    genWrapper = (function* generator(){
+//       var tweets = yield $.getJSON("tweets.json");
+//       console.log(tweets);
+//       var friends = yield $.getJSON("friends.json");
+//       console.log(friends);
+//       var videos = yield $.getJSON("/data/videos.json");
+//       console.log(videos);
 
-   });
+//    });
  
 
 
 
 
-   function genWrapper(generator) {
-      var gen = generator();
+//    function genWrapper(generator) {
+//       var gen = generator();
 
-      function handle(yielded) {
-         if (!yielded.done) {
-            yielded.value.then(function(data) {
-               return handle(gen.next(data));
-            })
-         }
-      }
-      return handle(gen.next());
-   }
+//       function handle(yielded) {
+//          if (!yielded.done) {
+//             yielded.value.then(function(data) {
+//                return handle(gen.next(data));
+//             })
+//          }
+//       }
+//       return handle(gen.next());
+//    }
 
-} 
+// } 
