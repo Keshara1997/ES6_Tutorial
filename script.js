@@ -72,11 +72,23 @@
 // }
 
 
-window.onload = function() {
-   var str = "good morning";
+// window.onload = function() {
+//    var str = "good morning";
 
-   if (str.startsWith("good")) {
-     var str2 = str.replace("good", "bad");
-   }
-   console.log(str2);
-   }
+//    if (str.startsWith("good")) {
+//      var str2 = str.replace("good", "bad");
+//    }
+//    console.log(str2);
+//    }
+ 
+
+window.onload = function() {
+  
+   var ninja = {
+        
+         chop: function(x) {
+            console.log("you chopped the enemy " + x + " times");
+         }
+      }
+      console.log(ninja.chop(5));
+   } 
